@@ -1,12 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>laboration2</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>laboration2</title>
+</head>
+
+<body>
+  <main class="background">
+    <header>
+      <h1>Laboration 2</h1>
+      <p>Programmering i TypeScript</p>
+    </header>
+    <div id="dashboard">
+      <section id="add-task">
+        <h2>Lägg till uppgift</h2>
+        <p>Fyll i formuläret för att lägga till en arbetsuppgift</p>
+        <form action="">
+          <div class="inputs">
+            <label for=""></label>
+            <input type="text" id="" name="">
+          </div>
+          <div class="">
+            <label for="priority-1">
+              <input type="radio" value="1" name="priority" id="priority-1">
+              Hög
+            </label>
+            <label for="priority-2">
+              <input type="radio" value="2" name="priority" id="priority-2">
+              Medel
+            </label>
+            <label for="priority-3">
+              <input type="radio" value="3" name="priority" id="priority-3">
+              Låg
+            </label>
+          </div>
+          <div class="inputs">
+            <label for="duedate"></label>
+            <input type="date" id="duedate" name="duedate">
+          </div>
+        </form>
+      </section>
+      <section id="task-list"></section>
+    </div>
+    <footer>
+      <h2>Laboration 2</h2>
+      <p>Av: Riina Aaltonen</p>
+    </footer>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
