@@ -34,6 +34,10 @@ export class TodoList {
 
     };
 
+    getTodos(): Todo[] {
+        return this.todos; 
+    }
+
     saveToLocalStorage(): void {
         localStorage.setItem("todos", JSON.stringify(this.todos));
     };

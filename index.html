@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>laboration2</title>
 </head>
 
@@ -20,27 +24,28 @@
         <p>Fyll i formuläret för att lägga till en arbetsuppgift</p>
         <form id="form">
           <div class="inputs">
-            <label for="task"></label>
+            <label for="task">Vad ska du göra?</label>
             <input type="text" id="task" name="task">
           </div>
           <div class="">
             <label for="priority-1">
               <input type="radio" value="1" name="priority" id="priority-1">
-              Hög
+              Hög prioritet
             </label>
             <label for="priority-2">
               <input type="radio" value="2" name="priority" id="priority-2">
-              Medel
+              Medel prioritet
             </label>
             <label for="priority-3">
               <input type="radio" value="3" name="priority" id="priority-3">
-              Låg
+              Låg prioritet
             </label>
           </div>
           <div class="inputs">
-            <label for="duedate"></label>
+            <label for="duedate">När behöver det senast vara klart?</label>
             <input type="date" id="duedate" name="duedate">
           </div>
+          <button type="submit">Lägg till</button>
         </form>
       </section>
       <section id="task-list"></section>
