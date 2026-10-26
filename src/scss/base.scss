@@ -1,0 +1,22 @@
+@use "sass:color"; 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//Primary colors 
+$color-primary-blue: #070022; 
+$color-primary-grey: #ECE9EA; 
+$color-primary-green: color.scale(#07393C, $lightness: 10%);
+
+//Secondary colors
+$color-secondary-red: #C44B56;
+$color-secondary-orange: #F3A155; 
+$color-secondary-yellow: #F5D687; 
+$color-secondary-green: #6C7F54; 
+$color-secondary-teal: #07393C;
+
+//Font
+$font: "Poppins", sans-serif; 

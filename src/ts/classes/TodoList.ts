@@ -30,12 +30,44 @@ export class TodoList {
         return true;
     };
 
-    markTodoCompleted(): void {
+    markTodoCompleted(todoIndex: number): void {
+
+        let task = this.todos[todoIndex];
+
+        if (!task) return;
+
+        task.completed = !task.completed;
+
+        if (task.completed === true) {
+            task.completedAt = new Date().toISOString();
+        } else {
+            delete task.completedAt;
+        }
+
+        this.todos.sort((a, b) => {
+
+            const completedComparison = Number(a.completed) - Number(b.completed);
+
+            if (completedComparison !== 0) {
+                return completedComparison;
+            } 
+
+            return a.priority - b.priority;
+
+        });
+
+        this.saveToLocalStorage();
 
     };
 
     getTodos(): Todo[] {
-        return this.todos; 
+        return this.todos;
+    }
+
+    deleteTodo(todoIndex: number): void {
+
+        this.todos.splice(todoIndex, 1); 
+        this.saveToLocalStorage();
     }
 
     saveToLocalStorage(): void {

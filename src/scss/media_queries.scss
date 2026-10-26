@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+
+    #dashboard {
+        display: flex;
+        flex-direction: column-reverse;
+
+        #add-task {
+            width: 100%;
+            margin: 0 auto;
+
+            .radio-container {
+                .radio {
+                    justify-content: start;
+                    gap: 4rem;
+                }
+            }
+        }
+
+        #task-list {
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    #dashboard {
+        #task-list {
+            padding: 2rem;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .dueDate {
+                gap: 1rem;
+            }
+        }
+    }
+
+}
