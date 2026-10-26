@@ -16,7 +16,6 @@ function init() {
   if (form !== null) {
     form.addEventListener("submit", (event: SubmitEvent) => {
       getFormData(event);
-      form.reset();
     })
   }
 
@@ -133,7 +132,7 @@ function renderErrorMessages() {
   const errorContainer = document.querySelector<HTMLElement>(".error");
 
   if (errorContainer !== null) {
-    errorContainer.textContent = "Något gick fel. Försök igen.";
+    errorContainer.textContent = "Kontrollera att du har angett en uppgift, valt prioritet och fyllt i ett giltigt datum.";
   }
 
 };
