@@ -62,6 +62,11 @@ function renderTodoList() {
 
     const todos = todoList.getTodos();
 
+    if (todos.length === 0) {
+      list.innerHTML = `<p>Du har inte lagt till några uppgifter än.</p>`; 
+      return;
+    }
+
     todos.forEach((task, index) => {
 
       let priorityText = "";
