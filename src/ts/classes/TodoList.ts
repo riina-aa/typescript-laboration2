@@ -26,6 +26,7 @@ export class TodoList {
         }
 
         this.todos.push(todo);
+        this.sortTodos(); 
         this.saveToLocalStorage();
         return true;
     };
@@ -44,18 +45,7 @@ export class TodoList {
             delete task.completedAt;
         }
 
-        this.todos.sort((a, b) => {
-
-            const completedComparison = Number(a.completed) - Number(b.completed);
-
-            if (completedComparison !== 0) {
-                return completedComparison;
-            } 
-
-            return a.priority - b.priority;
-
-        });
-
+        this.sortTodos(); 
         this.saveToLocalStorage();
 
     };
@@ -64,9 +54,22 @@ export class TodoList {
         return this.todos;
     }
 
+    sortTodos(): void {
+        this.todos.sort((a, b) => {
+
+            const completedComparison = Number(a.completed) - Number(b.completed);
+
+            if (completedComparison !== 0) {
+                return completedComparison;
+            }
+
+            return a.priority - b.priority;
+        })
+    }
+
     deleteTodo(todoIndex: number): void {
 
-        this.todos.splice(todoIndex, 1); 
+        this.todos.splice(todoIndex, 1);
         this.saveToLocalStorage();
     }
 
@@ -80,6 +83,7 @@ export class TodoList {
 
         if (storedTodos !== null) {
             this.todos = JSON.parse(storedTodos) as Todo[];
+            this.sortTodos();
         }
     };
 }
