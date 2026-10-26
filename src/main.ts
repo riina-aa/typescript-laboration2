@@ -1,5 +1,4 @@
 import "./scss/main.scss";
-import type { Todo } from "./ts/interfaces/Todo";
 import { TodoList } from "./ts/classes/TodoList";
 
 document.addEventListener("DOMContentLoaded", () => {
